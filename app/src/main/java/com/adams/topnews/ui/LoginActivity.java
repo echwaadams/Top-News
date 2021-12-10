@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -42,6 +43,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View view){
         if (view == mOtherSignup){
             Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
+            startActivity(intent);
+            finish();
+        }
+        if (view == mLoginButton){
+            Intent intent = new Intent(LoginActivity.this, LocationActivity.class);
             startActivity(intent);
             finish();
         }

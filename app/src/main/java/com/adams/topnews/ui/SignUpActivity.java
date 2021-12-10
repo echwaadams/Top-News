@@ -48,12 +48,15 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         if (view == mOtherSignIn){
             Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActionMode(intent);
+            startActivity(intent);
             finish();
         }
         //passing intent to login activity
-        Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
-        startActivity(intent);
+        if (view == mSignupButton){
+            Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+        }
         //create new user
         if (view == mSignupButton){
             createNewUser();

@@ -41,7 +41,7 @@ public class LocationActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View view){
         if (view == mFindHomesButton){
             String location = mLocationEditText.getText().toString();
-            Intent intent = new Intent(LoginActivity.this, NewsActivity.class);
+            Intent intent = new Intent(LocationActivity.this, NewsActivity.class);
             startActivity(intent);
         }
     }

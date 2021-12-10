@@ -85,8 +85,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/otherSignin"
         android:layout_centerHorizontal="true"
-        android:text="Don't have an account? Sign Up here!"
-        android:textColor="@color/white"
+        android:text="Already have an account? login here!"
+        android:textColor="@color/black"
         android:layout_below="@id/signupButton"
         android:layout_marginBottom="20dp"
         android:textSize="16sp"/>
