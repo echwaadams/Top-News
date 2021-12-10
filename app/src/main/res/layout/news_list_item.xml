@@ -8,7 +8,7 @@
         android:layout_width="130dp"
         android:layout_height="100dp"
         android:id="@+id/newsImageView"
-        android:src="waffles"
+        android:src="@drawable/login"
         android:scaleType="centerCrop"/>
 
     <LinearLayout
