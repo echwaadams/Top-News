@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.adams.topnews.R;
+
 public class SignUpActivity extends AppCompatActivity {
 
     @Override
