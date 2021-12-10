@@ -1,4 +1,7 @@
 package com.adams.topnews.adapters;
 
-public class NewsListAdapter {
+import androidx.recyclerview.widget.RecyclerView;
+
+public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.NewsViewHolder> {
+
 }

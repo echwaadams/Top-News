@@ -4,12 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageView
-        android:layout_width="130dp"
-        android:layout_height="100dp"
-        android:id="@+id/newsImageView"
-        android:src="@drawable/login"
-        android:scaleType="centerCrop"/>
+
 
     <LinearLayout
         android:orientation="vertical"
@@ -24,8 +19,7 @@
             android:id="@+id/newsNameTextView"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:text="News Title"
-            android:textColor="@color/black"/>
+            android:text="News Title" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -37,15 +31,13 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:id="@+id/newsImageView"
+                android:src="@drawable/login"
+                android:scaleType="centerCrop"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rating"
-                android:id="@+id/ratingTextView"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:textColor="@color/white"/>
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>
