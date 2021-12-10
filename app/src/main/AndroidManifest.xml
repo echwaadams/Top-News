@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TopNews">
         <activity
+            android:name=".ui.LoginActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.SignUpActivity"
             android:exported="true" />
         <activity
