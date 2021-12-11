@@ -3,8 +3,11 @@ package com.adams.topnews.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import org.parceler.Parcel;
+
 import javax.xml.transform.Source;
 
+@Parcel
 public class Article {
 
     @SerializedName("source")
@@ -35,6 +38,10 @@ public class Article {
     @Expose
     private String publishedAt;
 
+    // empty constructor
+    public Article(){
+
+    }
     public Source getSource() {
         return source;
     }
