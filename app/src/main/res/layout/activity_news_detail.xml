@@ -6,4 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".ui.NewsDetailActivity">
 
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewPager"
+        tools:ignore="MissingConstraints">
+
+        <androidx.viewpager.widget.PagerTabStrip
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pagerHeader"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"/>
+    </androidx.viewpager.widget.ViewPager>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
