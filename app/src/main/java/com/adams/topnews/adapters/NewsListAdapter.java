@@ -1,6 +1,7 @@
 package com.adams.topnews.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +12,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.adams.topnews.R;
 import com.adams.topnews.models.Article;
+import com.adams.topnews.ui.NewsDetailActivity;
 import com.squareup.picasso.Picasso;
+
+import org.parceler.Parcels;
 
 import java.util.List;
 
@@ -56,6 +60,8 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.NewsVi
             super(itemView);
             ButterKnife.bind(this, itemView);
             mContext = itemView.getContext();
+
+            itemView.setOnClickListener(this);
         }
 
         public void bindNews(Article news) {
@@ -64,5 +70,13 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.NewsVi
             mNewsNameTextView.setText(news.getAuthor());
             mCategoryTextView.setText(news.getSource().getSystemId());
         }
+    }
+    @Override
+    public void onClick(View v){
+        int itemPosition = getItemCount();
+        Intent intent = new Intent(mContext, NewsDetailActivity.class);
+        intent.putExtra("position", itemPosition);
+        intent.putExtra("news", Parcels.wrap(mNews));
+        mContext.startActivity(intent);
     }
 }
