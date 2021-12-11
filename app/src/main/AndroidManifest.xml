@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TopNews">
         <activity
-            android:name=".ui.NewsActivity"
+            android:name=".ui.NewsListActivity"
             android:exported="true" />
         <activity
             android:name=".ui.LocationActivity"

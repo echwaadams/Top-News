@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -15,7 +14,6 @@ import com.adams.topnews.R;
 import com.adams.topnews.adapters.NewsListAdapter;
 import com.adams.topnews.models.Article;
 import com.adams.topnews.models.News;
-import com.adams.topnews.models.Source;
 import com.adams.topnews.network.NewsApiInterface;
 import com.adams.topnews.network.NewsClient;
 
@@ -27,8 +25,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class NewsActivity extends AppCompatActivity {
-    private static final String TAG = NewsActivity.class.getSimpleName();
+public class NewsListActivity extends AppCompatActivity {
+    private static final String TAG = NewsListActivity.class.getSimpleName();
 
     @BindView(R.id.titleCategory)
     TextView mTitleCategory;
@@ -65,9 +63,9 @@ public class NewsActivity extends AppCompatActivity {
 
                 if (response.isSuccessful()) {
                     news = response.body().getArticles();
-                    mAdapter = new NewsListAdapter(NewsActivity.this, news);
+                    mAdapter = new NewsListAdapter(NewsListActivity.this, news);
                     mRecyclerCategory.setAdapter(mAdapter);
-                    RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(NewsActivity.this);
+                    RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(NewsListActivity.this);
                     mRecyclerCategory.setLayoutManager(layoutManager);
                     mRecyclerCategory.setHasFixedSize(true);
 
