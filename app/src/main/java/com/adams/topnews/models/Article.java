@@ -7,7 +7,7 @@ import org.parceler.Parcel;
 
 import javax.xml.transform.Source;
 
-@Parcel
+@Parcel(Parcel.Serialization.BEAN)
 public class Article {
 
     @SerializedName("source")
@@ -46,9 +46,9 @@ public class Article {
         return source;
     }
 
-    public void setSource(Source source) {
-        this.source = source;
-    }
+//    public void setSource(Source source) {
+//        this.source = source;
+//    }
 
     public String getAuthor() {
         return author;

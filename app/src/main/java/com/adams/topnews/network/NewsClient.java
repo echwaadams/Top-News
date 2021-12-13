@@ -17,14 +17,14 @@ public class NewsClient {
     public static final String NEWSAPI_BASE_URL = "https://newsapi.org/v2/";
     public static Retrofit retrofit;
 
-    public static Retrofit getNewsClient(){
+    public static NewsApiInterface getNewsClient(){
         if (retrofit == null){
             retrofit = new Retrofit.Builder().baseUrl(NEWSAPI_BASE_URL)
                     .client(getUnsafeOkHttpClient().build())
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
-        return retrofit;
+        return retrofit.create(NewsApiInterface.class);
     }
 
     public static OkHttpClient.Builder getUnsafeOkHttpClient(){

@@ -20,7 +20,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
     //member variable
     @BindView(R.id.otherSignin) TextView mOtherSignIn;
-    @SuppressLint("NonConstantResourceId")
+//    @SuppressLint("NonConstantResourceId")
     @BindView(R.id.signupTextView)
     TextView mSignupTextView;
     @BindView(R.id.signupButton)
@@ -29,8 +29,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     EditText mEmailEditText;
     @BindView(R.id.passwordEditText)
     EditText mPasswordEditText;
-    @BindView(R.id.confirmPasswordEditText) EditText mConfirmPasswordEditText;
-    @BindView(R.id.userNameEditText) EditText mUserNameEditText;
+//    @BindView(R.id.confirmPasswordEditText) EditText mConfirmPasswordEditText;
+//    @BindView(R.id.userNameEditText) EditText mUserNameEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,32 +41,36 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
         //setting clickListener
         mSignupButton.setOnClickListener(this);
-        mOtherSignIn.setOnClickListener(this);
+//        mOtherSignIn.setOnClickListener(this);
     }
     @Override
     public void onClick(View view){
-        if (view == mOtherSignIn){
-            Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
-            finish();
-        }
+//        if (view == mOtherSignIn){
+//            Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
+//            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//            startActivity(intent);
+//            finish();
+//        }
         //passing intent to login activity
-        if (view == mSignupButton){
-            Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
+//        if (view == mSignupButton){
+//            Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
+//            startActivity(intent);
+//            finish();
+//        }
+//        //create new user
+//        if (view == mSignupButton){
+//            createNewUser();
+//        }
+        Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
             startActivity(intent);
-            finish();
-        }
-        //create new user
-        if (view == mSignupButton){
-            createNewUser();
-        }
+
     }
     //user creation
-    private void createNewUser(){
-        final String name = mUserNameEditText.getText().toString().trim();
-        final String email = mEmailEditText.getText().toString().trim();
-        String password = mPasswordEditText.getText().toString().trim();
-        String confirmPassword = mConfirmPasswordEditText.getText().toString().trim();
-    }
+//    private void createNewUser(){
+//
+//        final String name = mUserNameEditText.getText().toString().trim();
+//        final String email = mEmailEditText.getText().toString().trim();
+//        String password = mPasswordEditText.getText().toString().trim();
+//        String confirmPassword = mConfirmPasswordEditText.getText().toString().trim();
+//    }
 }

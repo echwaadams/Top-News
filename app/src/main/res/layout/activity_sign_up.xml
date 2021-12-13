@@ -67,7 +67,8 @@
         android:drawableLeft="@drawable/ic_baseline_info_24"
         android:textColorHint="@color/white"
         android:hint="Confirm Password" />
-    <com.google.android.material.button.MaterialButton
+
+    <Button
         android:id="@+id/signupButton"
         android:text="signup"
         android:layout_width="wrap_content"

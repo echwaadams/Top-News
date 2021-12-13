@@ -30,7 +30,7 @@
         android:drawablePadding="20dp"
         android:padding="20dp"/>
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/findHomesButton"
         android:text="Search"
         android:layout_width="wrap_content"

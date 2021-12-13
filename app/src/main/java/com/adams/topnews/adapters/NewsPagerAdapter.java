@@ -13,11 +13,6 @@ import java.util.List;
 public class NewsPagerAdapter extends FragmentPagerAdapter {
     private List<Article> mNews;
 
-    public NewsPagerAdapter(@NonNull FragmentManager fm, List<Article> mNews) {
-        super(fm);
-        this.mNews = mNews;
-    }
-
     public NewsPagerAdapter(@NonNull FragmentManager fm, int behavior, List<Article> mNews) {
         super(fm, behavior);
         this.mNews = mNews;

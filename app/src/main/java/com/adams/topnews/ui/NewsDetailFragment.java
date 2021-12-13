@@ -37,6 +37,7 @@ public class NewsDetailFragment extends Fragment {
     TextView mNewsNameTextView;
     @BindView(R.id.newsImageView)
     ImageView mNewsImageview;
+    @BindView(R.id.descriptionTextView) TextView mDescriptionTextView;
 
     private Article mArticle;
 
@@ -59,7 +60,7 @@ public class NewsDetailFragment extends Fragment {
      * @return A new instance of fragment NewsDetailFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static NewsDetailFragment newInstance(String Article, String news) {
+    public static NewsDetailFragment newInstance(Article news) {
         NewsDetailFragment newsDetailFragment = new NewsDetailFragment();
         Bundle args = new Bundle();
         args.putParcelable("news", Parcels.wrap(news));
@@ -81,10 +82,12 @@ public class NewsDetailFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_news_detail, container, false);
         ButterKnife.bind(this, view);
         Picasso.get().load(mArticle.getUrlToImage()).into(mNewsImageview);
+        mNewsNameTextView.setText(mArticle.getTitle());
+        mDescriptionTextView.setText(mArticle.getDescription());
 
-        List<String> source = new ArrayList<>();
-
-        for (Source sources: mArticle.getSource()) sources.getName();
+//        List<String> source = new ArrayList<>();
+//
+//        for (Source sources: mArticle.getSource()) sources.getName();
         return  view;
     }
 }

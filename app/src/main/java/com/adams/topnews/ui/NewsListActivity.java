@@ -38,7 +38,7 @@ public class NewsListActivity extends AppCompatActivity {
 
     private NewsListAdapter mAdapter;
 
-    public List<Article> news;
+    public List<Article> mNews;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,8 +62,8 @@ public class NewsListActivity extends AppCompatActivity {
                 hideProgressBar();
 
                 if (response.isSuccessful()) {
-                    news = response.body().getArticles();
-                    mAdapter = new NewsListAdapter(NewsListActivity.this, news);
+                    mNews = response.body().getArticles();
+                    mAdapter = new NewsListAdapter(mNews,NewsListActivity.this);
                     mRecyclerCategory.setAdapter(mAdapter);
                     RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(NewsListActivity.this);
                     mRecyclerCategory.setLayoutManager(layoutManager);
