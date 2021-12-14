@@ -11,8 +11,9 @@ Adams Echwa
 # Known Bugs
 Api does not retrieve the request data accordingly.
 
-#Contact and Support
+
+# Contact and Support
 For issues and contributions you can reach out through adamsechwa18@gmail.com
 
-#License
+# License
 MIT (c) 2021 Adams Echwa
